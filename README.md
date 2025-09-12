@@ -1,5 +1,5 @@
 # Link
-- [GitHubのリポジトリ](https://github.com/admin0430/ohara_uml.git)
+- [GitHubのリポジトリ](https://github.com/admin0430/ohara_uml)
 - [PlantUML公式ドキュメント](https://plantuml.com/ja/)
 - [drawio](https://app.diagrams.net/)
 
