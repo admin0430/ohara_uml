@@ -1,0 +1,23 @@
+@startuml Web_visiterユースケース図
+
+left to right direction
+
+actor 訪問者 as visitor
+
+rectangle "Web_visiter" {
+  usecase "新規登録" as register
+  usecase "ログイン" as login
+  usecase "情報の参照" as view_info
+  usecase "情報の変更" as update_info
+  usecase "情報の削除" as delete_info
+  usecase "ログアウト" as logout
+}
+
+visitor --> register
+visitor --> login
+visitor --> view_info
+visitor --> update_info
+visitor --> delete_info
+visitor --> logout
+
+@enduml

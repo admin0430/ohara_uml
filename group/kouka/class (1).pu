@@ -1,0 +1,24 @@
+@startuml Robodogクラス図
+skinparam classAttributeIconSize 0
+hide circle
+
+class 大原図書館システム {
+ -学生証
+ -職員証
+ -書名
+ -管理番号
+ -利用資格
+ -予約カード
+ -会員
+ -学部生
+ -教職員
+ -会員番号
+ -メールアドレス
+
+ +貸し出し予約の受付()
+ +図書の貸し出し()
+ +図書の返却処理()
+ +図書の管理番号ごとの貸出()
+}
+
+@enduml

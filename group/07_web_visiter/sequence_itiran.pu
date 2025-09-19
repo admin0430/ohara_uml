@@ -1,0 +1,36 @@
+@startuml
+
+hide footbox
+skinparam boundaryBackgroundColor #D5E8D4
+skinparam controlBackgroundColor  #F8CECC
+skinparam entityBackgroundColor   #DAE8FC
+
+actor ユーザー as A
+boundary 訪問者システムメニュー as B1
+control 訪問者一覧表示 as B2
+entity 訪問者 as E
+boundary 訪問者一覧画面 as B3
+
+A -> B1: 1:訪問者一覧を選択()
+activate A
+activate B1
+
+B1 -> B2: 1.1起動()
+activate B2
+
+
+B2 -> E: 1.1.1:訪問者情報一覧取得()
+activate E
+E --> B2 
+deactivate E
+
+
+
+
+
+B2 -> B3: 1.1.2:表示()
+activate B3
+
+
+
+@enduml

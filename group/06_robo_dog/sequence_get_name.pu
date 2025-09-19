@@ -1,0 +1,17 @@
+@startuml
+actor ユーザー
+participant "RoboDog\nシステムメニュー" as RoboDogSystemMenu
+participant "名前の変更画面の\n表示する" as NameChangeScreenDisplay
+participant "名前の変更画面" as NameChangeScreen
+participant "RoboDog" as RoboDog
+
+ユーザー -> RoboDogSystemMenu : 名前の変更を選択
+RoboDogSystemMenu -> NameChangeScreenDisplay :
+activate NameChangeScreenDisplay
+NameChangeScreenDisplay -> RoboDog : 名前の取得
+activate RoboDog
+RoboDog --> NameChangeScreenDisplay :
+deactivate RoboDog
+NameChangeScreenDisplay -> NameChangeScreen : 変更した名前の表示
+deactivate NameChangeScreenDisplay
+@enduml

@@ -1,0 +1,22 @@
+@startuml web_visitorクラス図
+skinparam classAttributeIconSize 0
+hide circle
+
+class web_visitor {
+ -ユーザID
+ -名前
+ -パスワード
+ -学校名
+ -所属名
+ -メールアドレス
+ -年齢
+
+ +ユーザの新規登録()
+ +名前の取得()
+ +名前の変更()
+ +自分と他の訪問者の情報の参照()
+ +登録情報の変更()
+ +登録情報の削除()
+}
+
+@enduml

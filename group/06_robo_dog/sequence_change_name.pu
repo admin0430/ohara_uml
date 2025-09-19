@@ -1,0 +1,18 @@
+@startuml
+actor ユーザー
+
+participant "名前の変更画面" as NameChangeScreen
+participant "名前の変更" as NameChangeLogic
+participant "RoboDog" as RoboDog
+participant "名前の変更結果\n表示画面" as ResultScreen
+
+ユーザー -> NameChangeScreen : 名前の変更を選択
+NameChangeScreen -> NameChangeLogic : 
+activate NameChangeLogic
+NameChangeLogic -> RoboDog : 名前の取得
+activate RoboDog
+RoboDog --> NameChangeLogic : 
+deactivate RoboDog
+NameChangeLogic -> ResultScreen : 変更した名前の表示
+deactivate NameChangeLogic
+@enduml
