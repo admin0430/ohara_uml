@@ -1,6 +1,5 @@
 from urllib.parse import parse_qs
 
-
 def parse_post(environ):
     """POSTデータを辞書で返す"""
     try:
