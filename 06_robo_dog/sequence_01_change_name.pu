@@ -5,7 +5,7 @@ skinparam controlBackgroundColor  #F8CECC
 skinparam entityBackgroundColor   #DAE8FC
  
 actor ユーザー as A
-boundary "RoboDog_menu.html" as B1
+boundary "RoboDog_menu.htm" as B1
 boundary 名前の変更画面 as B2
 boundary 名前の変更結果画面 as B3
 control "ChangeMyNameData.jsp" as C1
