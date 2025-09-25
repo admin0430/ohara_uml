@@ -6,4 +6,4 @@ def greet_with_time():
     set_new_time()
     greeting = get_my_greeting()
 
-    return render_template("boundaries/greeting.html", greeting=greeting)
+    return render_template("boundaries/greet_with_time.html", greeting=greeting)
