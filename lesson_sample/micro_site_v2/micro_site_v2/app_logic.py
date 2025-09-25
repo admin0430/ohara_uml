@@ -63,3 +63,11 @@ def set_second_value(second_value) -> None:
 
 
 # get_addition: jsonから値を取ってきて、足し算した結果を返却
+def get_addition() -> int:
+    """足し算の結果を返す"""
+    with open(ROBODOG_FILE, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    
+    addition = data['first_value'] + data['second_value']
+
+    return addition
