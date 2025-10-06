@@ -1,0 +1,84 @@
+@startuml 購入 シーケンス図 
+
+title 購入 シーケンス図 
+
+hide footbox
+' スキンパラメータ設定 (色指定)
+skinparam boundaryBackgroundColor #D5E8D4 
+skinparam controlBackgroundColor #F8CECC 
+skinparam entityBackgroundColor #DAE8FC 
+
+' アクターとコンポーネントの定義
+actor ユーザー as A
+boundary ログイン画面 as B_Login
+boundary 商品サイト画面 as B1
+control 商品検索 as C_Search
+control カートに入れる as C1
+entity 在庫DB as E_Stock
+entity 商品DB as E_Item
+boundary 購入キャンセル画面 as B_Cancel
+
+' -- 1. サイトにログインする --
+A -> B_Login: サイトにログインする
+activate A
+activate B_Login
+B_Login --> B1: ログイン成功 (商品サイト画面を表示)
+activate B1
+deactivate B_Login
+
+' -- 2. 商品検索 --
+B1 -> C_Search: 商品検索要求
+activate C_Search
+
+C_Search -> E_Stock: 在庫があるか確認する
+activate E_Stock
+E_Stock --> C_Search: 在庫情報
+deactivate E_Stock
+
+C_Search -> E_Item: 商品情報取得
+activate E_Item
+E_Item --> C_Search: 商品
+deactivate E_Item
+
+opt 在庫がある場合
+    C_Search --> B1: 検索結果(商品)を表示
+else
+    C_Search --> B1: 検索結果(在庫なし)を表示
+end
+
+deactivate C_Search
+
+' -- 3. 商品をカートに入れる --
+B1 -> C1: 商品をカートに入れる
+activate C1
+C1 --> B1: カート一覧表示
+deactivate C1
+
+' -- 4. 購入手続きを開始 --
+B1 -> C1: 購入手続きを開始
+activate C1
+
+' -- 5. 注文確定フロー (optを使用して購入キャンセルを表現) --
+opt ユーザーが注文を確定する場合
+    B1 -> C1: 注文を確定する
+    
+    ' C1は注文データ保存後、在庫を更新する
+    C1 -> E_Stock: 5.2.在庫引き当て更新()
+    activate E_Stock
+    E_Stock --> C1: 完了
+    deactivate E_Stock
+    
+    C1 --> B1: 商品を購入する (注文完了画面表示)
+    deactivate C1
+else 購入をやめる場合
+    B1 -> B_Cancel: 購入をやめる場合
+    activate B_Cancel
+    B_Cancel --> A: キャンセル完了
+    deactivate B_Cancel
+    deactivate C1
+end
+
+deactivate B1
+deactivate A
+
+@enduml

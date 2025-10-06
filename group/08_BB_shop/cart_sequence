@@ -1,0 +1,98 @@
+@startuml
+
+title カート追加 シーケンス図 (ロバストネス図整合版)
+
+hide footbox
+' スキンパラメータ設定
+skinparam boundaryBackgroundColor #D5E8D4 
+skinparam controlBackgroundColor #F8CECC 
+skinparam entityBackgroundColor #DAE8FC 
+
+' アクターとコンポーネントの定義
+actor ユーザー as A
+boundary 商品画面 as B_Item
+boundary 追加完了画面 as B_Added
+boundary 追加一覧 as B_List
+control カートに追加 as C_Add
+control 表示 as C_Display
+entity 商品サイト as E_Site 
+entity 在庫 as E_Stock
+
+' -- 1. ユーザーが商品を選択し、商品画面を表示 --
+A -> B_Item: 買いたい商品を選択
+activate A
+activate B_Item
+
+B_Item -> C_Display: 商品画面表示
+activate C_Display
+C_Display -> E_Site: 商品情報取得
+activate E_Site
+E_Site --> C_Display: 商品情報
+deactivate E_Site
+
+C_Display --> B_Item: 表示
+deactivate C_Display
+
+' -- 2. 商品画面からカートに追加ボタンをクリックする --
+A -> B_Item: 商品追加ボタンをクリックする
+activate B_Item
+
+' -- 3. 在庫確認 --
+B_Item -> E_Stock: 在庫確認
+activate E_Stock
+E_Stock --> B_Item: 在庫情報
+deactivate E_Stock
+
+opt 在庫がある場合
+    ' -- 4. カートに追加制御の実行 --
+    B_Item -> C_Add: カートに追加 (商品ID, 数量)
+    activate C_Add
+    
+    ' C_Addはカートデータ操作（追加/更新）を内部で処理
+    C_Add -> C_Add: 4.1.カート内商品の有無を確認
+    
+    alt 存在する商品の場合
+        C_Add -> C_Add: 4.2.数量を更新
+    else 存在しない商品の場合
+        C_Add -> C_Add: 4.3.新規商品を追加
+    end
+    
+    ' -- 5. 追加完了画面の表示 --
+    C_Add --> B_Added: 追加完了画面表示
+    activate B_Added
+    deactivate C_Add
+    
+    B_Added --> A: 追加完了を表示
+    deactivate B_Added
+    
+    ' -- 6. 続けて追加一覧を表示 --
+    B_Item -> C_Display: 追加一覧を選択
+    activate C_Display
+    C_Display --> B_List: 追加一覧表示
+    activate B_List
+    deactivate C_Display
+
+    ' -- 7. 代替フロー: 変更・キャンセル処理 (optで表現) --
+    opt 変更・キャンセルする場合 (追加一覧画面から)
+        B_List -> B_List: 変更/キャンセル操作を選択
+        
+        alt 数量変更する場合
+            B_List -> B_List: 数量変更画面へ遷移
+            C_Add -> C_Add: 数量変更要求
+            C_Add --> B_List: 数量変更結果を表示
+        else キャンセルする場合
+            C_Add -> C_Add: キャンセル要求
+            C_Add --> B_List: キャンセルされた商品を一覧から削除
+        end
+    end
+    
+    deactivate B_List
+    
+else 在庫不足の場合
+    B_Item -> B_Item: エラーメッセージを表示して終了
+end
+
+deactivate B_Item
+deactivate A
+
+@enduml

@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.5">
+  <diagram name="ページ1" id="THoMJTSWU5tPRsAs19lO">
+    <mxGraphModel dx="778" dy="1629" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-1" value="配送管理者" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="170" width="80" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-2" value="注文一覧" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#CCFF99);strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="210" y="80" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-5" value="注文一覧" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#CCFF99);strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="650" y="300" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-6" value="注文一覧" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#CCFF99);strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="660" y="220" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-7" value="注文一覧" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#CCFF99);strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="650" y="20" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-8" value="注文一覧" style="shape=umlBoundary;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#CCFF99);strokeColor=#2D7600;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="670" y="120" width="100" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-9" value="注文一覧画面&lt;div&gt;表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#A20025,#FF9999);fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="400" y="90" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-10" value="発送管理者" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=light-dark(#1BA1E2,#99CCFF);fontColor=#ffffff;strokeColor=#006EAF;" vertex="1" parent="1">
+          <mxGeometry x="820" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-11" value="注文一覧画面&lt;div&gt;表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#A20025,#FF9999);fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="760" y="210" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-12" value="注文一覧画面&lt;div&gt;表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#A20025,#FF9999);fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="590" y="10" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-13" value="注文一覧画面&lt;div&gt;表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#A20025,#FF9999);fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="610" y="-60" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-14" value="注文一覧画面&lt;div&gt;表示&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#A20025,#FF9999);fontColor=#ffffff;strokeColor=#6F0000;" vertex="1" parent="1">
+          <mxGeometry x="665" y="420" width="90" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-15" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.75;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.02;entryY=0.542;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g1qk5BBzHWVA1IABG7nH-1" target="g1qk5BBzHWVA1IABG7nH-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="310" y="219" as="sourcePoint" />
+            <mxPoint x="470" y="219" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-16" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="280" y="339.5" as="sourcePoint" />
+            <mxPoint x="440" y="339.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-17" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-18" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-19" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-20" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="270" as="sourcePoint" />
+            <mxPoint x="430" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="g1qk5BBzHWVA1IABG7nH-21" value="" style="endArrow=diamondThin;endFill=1;endSize=24;html=1;rounded=0;exitX=0.993;exitY=0.567;exitDx=0;exitDy=0;exitPerimeter=0;entryX=-0.007;entryY=0.507;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="g1qk5BBzHWVA1IABG7nH-2" target="g1qk5BBzHWVA1IABG7nH-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="380" y="280" as="sourcePoint" />
+            <mxPoint x="540" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,123 @@
+@startuml
+' === スタイルと色の設定 ===
+skinparam actorStyle awesome
+skinparam {
+    Participant {
+        BorderColor black
+        FontColor black
+    }
+    Boundary {
+        BackgroundColor #90EE90
+    }
+    Control {
+        BackgroundColor #FFC0CB
+    }
+    Entity {
+        BackgroundColor #ADD8E6
+    }
+}
+
+' === 参加者（ライフライン）の宣言 ===
+actor "事務員" as Actor
+boundary "予約メニュー画面" as MenuScreen
+boundary "図書予約画面" as ReserveScreen
+control "図書予約制御" as Controller
+entity "会員情報" as MemberDB
+entity "図書情報" as BookDB
+entity "予約情報" as ReserveDB
+boundary "予約完了画面" as CompleteScreen
+
+autonumber "BF#.##"
+
+== 1. 予約開始と画面表示 ==
+
+Actor -> MenuScreen : 予約メニューを押す (BF1)
+MenuScreen -> Controller : 予約開始イベント通知
+activate Controller
+
+Controller -> ReserveScreen : 図書予約画面を表示 (BF2)
+activate ReserveScreen
+deactivate Controller
+
+
+== 2. 会員情報入力とチェック ==
+Actor -> ReserveScreen : 会員番号を入力・確定 (BF3)
+ReserveScreen -> Controller : 会員番号送信
+activate Controller
+
+' --- 代替フロー AF1 のチェック ---
+alt 会員番号が未入力 または 未登録の場合 (AF1)
+    Controller -> MemberDB : 会員情報検索・取得 (AF1チェック)
+    Controller --> ReserveScreen : "会員番号を確認してください"と表示 (AF1)
+    Note right of ReserveScreen #FFC0CB : -> BF3に戻る
+    deactivate Controller
+end
+
+' AF1が正常終了した場合の処理 (BF4)
+opt 会員番号が正しい場合
+    Controller -> MemberDB : 会員情報検索・取得
+    Controller -> ReserveScreen : 会員の氏名・種別を表示 (BF4)
+    deactivate Controller
+end
+
+
+== 3. 書名入力と図書情報チェック ==
+Actor -> ReserveScreen : 書名を検索 (BF5)
+ReserveScreen -> Controller : 書名検索リクエスト
+activate Controller
+
+' --- 代替フロー AF2 のチェック ---
+alt 書名が未入力の場合 (AF2)
+    Controller --> ReserveScreen : "書名を入力してください"と表示 (AF2)
+    Note right of ReserveScreen #FFC0CB : -> BF5に戻る
+    deactivate Controller
+end
+
+' --- 代替フロー AF3 のチェック ---
+alt 該当する図書が存在しない場合 (AF3)
+    Controller -> BookDB : 該当図書検索 (AF3チェック)
+    Controller --> ReserveScreen : "該当する図書が見つかりません"と表示 (AF3)
+    Note right of ReserveScreen #FFC0CB : -> BF5に戻る
+    deactivate Controller
+end
+
+' AF2/AF3が正常終了した場合の処理 (BF6)
+opt 該当図書が存在する場合
+    Controller -> BookDB : 該当図書検索
+    Controller -> ReserveScreen : 図書一覧を表示 (BF6)
+    deactivate Controller
+end
+
+
+== 4. 予約対象の選択と最終チェック ==
+Actor -> ReserveScreen : 図書を選択 (BF7)
+ReserveScreen -> Controller : 予約対象図書選択
+activate Controller
+
+' --- 代替フロー AF4, AF5 のチェック準備 ---
+Controller -> MemberDB : 会員種別取得 (AF4)
+Controller -> BookDB : 図書種別・在庫情報取得 (AF4, AF5)
+
+' --- 代替フロー AF4 のチェック ---
+alt 学生が雑誌を予約する場合 (AF4)
+    Controller --> ReserveScreen : "学生は雑誌を予約できません"と表示 (AF4)
+    Note right of ReserveScreen #FFC0CB : -> BF5に戻る
+    deactivate Controller
+end
+
+' --- 代替フロー AF5 のチェック ---
+alt 未貸し出しの本がある場合 (AF5)
+    Controller --> ReserveScreen : "在庫があります"と表示 (AF5)
+    Note right of ReserveScreen #FFC0CB : -> BF5に戻る
+    deactivate Controlwler
+end
+
+' AF4/AF5が正常終了した場合の処理 (BF8)
+opt すべての条件をクリアした場合
+    == 5. 予約の保存と完了 ==
+    Controller -> ReserveDB : 予約情報(ISBN, 会員番号, 予約日時)を保存 (BF8)
+    Controller -> CompleteScreen : 予約完了画面を表示 (BF8)
+    deactivate Controller
+    deactivate ReserveScreen
+end
+@enduml

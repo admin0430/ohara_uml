@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Edg/140.0.0.0" version="28.2.5">
+  <diagram name="ページ1" id="Z2aiDYjOt5obHeTeUV2m">
+    <mxGraphModel dx="2476" dy="1782" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-1" value="事務職員&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="-140" y="250" width="80" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-4" value="図書予約&lt;div&gt;制御&lt;/div&gt;" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#FF9999);fontColor=#ffffff;strokeColor=light-dark(#2D7600,#FFFFFF);" vertex="1" parent="1">
+          <mxGeometry x="420" y="210" width="110" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-5" value="会員情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#99FFFF);fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="780" y="250" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-6" value="予約メニュー画面" style="shape=umlBoundary;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=light-dark(#60A917,#CCFF99);fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="140" y="-40" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-8" value="予約完了&lt;div&gt;画面&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=light-dark(#60A917,#CCFF99);fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="170" y="550" width="140" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-9" value="図書予約&lt;div&gt;画面&lt;/div&gt;" style="shape=umlBoundary;whiteSpace=wrap;html=1;strokeColor=#2D7600;fillColor=light-dark(#60A917,#CCFF99);fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="230" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-10" value="図書情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#99FFFF);fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="740" y="550" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-11" value="予約情報" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;fillColor=light-dark(#60A917,#99FFFF);fontColor=#ffffff;strokeColor=#2D7600;" vertex="1" parent="1">
+          <mxGeometry x="690" y="-40" width="110" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-1" target="Ednmcpp7QuiH1dI-fVmS-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="340" as="sourcePoint" />
+            <mxPoint x="80" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-20" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.02;entryY=0.467;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-1" target="Ednmcpp7QuiH1dI-fVmS-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="450" as="sourcePoint" />
+            <mxPoint x="80" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.007;entryY=0.533;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-1" target="Ednmcpp7QuiH1dI-fVmS-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="450" as="sourcePoint" />
+            <mxPoint x="80" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-26" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.708;exitY=0.195;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-4" target="Ednmcpp7QuiH1dI-fVmS-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="200" as="sourcePoint" />
+            <mxPoint x="530" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-28" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.958;exitY=0.57;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-4" target="Ednmcpp7QuiH1dI-fVmS-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="290" as="sourcePoint" />
+            <mxPoint x="490" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-30" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.854;exitY=0.878;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-4" target="Ednmcpp7QuiH1dI-fVmS-10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="300" as="sourcePoint" />
+            <mxPoint x="280" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-31" value="会員番号入力&lt;div&gt;書名入力&lt;/div&gt;&lt;div&gt;図書選択&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="180" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-32" value="予約開始イベント通知&lt;div&gt;会員番号送信&lt;/div&gt;&lt;div&gt;書名検索リクエスト&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="360" y="-20" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-33" value="会員情報&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;検索&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;・取得&lt;/span&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="790" y="185" width="110" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-34" value="予約情報&lt;div&gt;保存&lt;/div&gt;&lt;div&gt;（ISBN,会員番号、予約日時）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-35" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=-0.023;entryY=0.551;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1.034;exitY=0.551;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-9" target="Ednmcpp7QuiH1dI-fVmS-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="330" as="sourcePoint" />
+            <mxPoint x="250" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-38" value="図書情報検索・取得、書名&lt;div&gt;著者・出版社取得、図書種別&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="590" y="430" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-39" value="&lt;div&gt;未登録の場合&lt;/div&gt;「会員番号を確認してください」&lt;div&gt;と表示（AF①）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="204" y="190" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-40" value="&lt;div&gt;書名が未入力の場合&lt;/div&gt;「書名を入力してください」&lt;div&gt;と表示（AF②）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="214" y="240" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-42" value="該当する図書が存在しない場合&lt;br&gt;「該当する図書が見つかりません」&lt;div&gt;と表示（AF③）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="204" y="290" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-43" value="学生が雑誌を借りようとする場合&lt;br&gt;「学生は雑誌を予約できません」&lt;div&gt;と表示（AF④）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="224" y="340" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-44" value="&lt;div&gt;未貸し出しの本がある場合&lt;/div&gt;「在庫があります」&lt;div&gt;と表示（AF⑤）&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="229" y="390" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-45" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.286;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.91;exitY=0.168;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-8" target="Ednmcpp7QuiH1dI-fVmS-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="340" as="sourcePoint" />
+            <mxPoint x="435" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ednmcpp7QuiH1dI-fVmS-46" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.43;entryY=0.067;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.987;exitY=0.674;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="Ednmcpp7QuiH1dI-fVmS-6" target="Ednmcpp7QuiH1dI-fVmS-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="140" as="sourcePoint" />
+            <mxPoint x="465" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="360" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
